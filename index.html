@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎂 Happy Birthday Salwina Sakina Fatria</title>
+<title>🎂 Happy Birthday Salwina</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
 
@@ -63,56 +63,30 @@
     text-align:center;
   }
 
-  /* ====== JUDUL ====== */
+  /* ====== JUDUL (putih bersih) ====== */
   .title{
-    font-size:clamp(1.4rem,5vw,2.5rem);
-    font-weight:800;
+    font-size:clamp(1.4rem,5vw,2.4rem);
+    font-weight:700;
     line-height:1.25;
-    letter-spacing:-.5px;
-    background:linear-gradient(90deg,#ffd166,#ff6b9d,#c77dff,#4cc9f0,#ffd166);
-    background-size:300% 100%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:shimmer 7s linear infinite;
+    letter-spacing:-.3px;
+    color:#ffffff;
     margin-bottom:10px;
   }
-  @keyframes shimmer{ to{ background-position:300% 0 } }
 
-  /* Nama Salwina — jadi bintang utama */
+  /* ====== NAMA (putih bersih) ====== */
   .name{
-    font-size:clamp(1.9rem,7.5vw,3.6rem);
-    font-weight:900;
+    font-size:clamp(1.8rem,7vw,3.4rem);
+    font-weight:800;
     line-height:1.15;
-    letter-spacing:-1px;
-    background:linear-gradient(120deg,#fff 0%,#ffd166 25%,#ff6b9d 50%,#c77dff 75%,#fff 100%);
-    background-size:220% 100%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:shimmer 5s linear infinite;
-    filter:drop-shadow(0 0 24px rgba(255,107,157,.55));
+    letter-spacing:-.8px;
+    color:#ffffff;
     margin-bottom:6px;
-    position:relative;
-  }
-  .name::after{
-    content:'';
-    position:absolute;
-    left:50%;
-    bottom:-8px;
-    transform:translateX(-50%);
-    width:60%;
-    height:3px;
-    border-radius:99px;
-    background:linear-gradient(90deg,transparent,#ffd166,#ff6b9d,#c77dff,transparent);
-    opacity:.85;
-    filter:blur(1px);
   }
 
   .subtitle{
-    font-size:clamp(.82rem,2.7vw,1.02rem);
-    color:rgba(255,255,255,.72);
-    margin-top:16px;
+    font-size:clamp(.82rem,2.7vw,1rem);
+    color:rgba(255,255,255,.7);
+    margin-top:14px;
     margin-bottom:4px;
     letter-spacing:.4px;
     font-style:italic;
@@ -353,7 +327,8 @@
     transform:translateY(14px) scale(.96);
     transition:opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1.4);
     pointer-events:none;
-    max-width:480px;
+    max-width:520px;
+    width:100%;
   }
   .wish.show{
     opacity:1;
@@ -362,45 +337,22 @@
   }
   .wish-card{
     background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.16);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
     border-radius:22px;
-    padding:28px 32px 26px;
-    box-shadow:0 20px 60px rgba(0,0,0,.5), 0 0 80px rgba(196,77,255,.18);
-    position:relative;
-    overflow:hidden;
-  }
-  .wish-card::before{
-    content:'';
-    position:absolute;
-    top:-50%; left:-50%;
-    width:200%; height:200%;
-    background:conic-gradient(from 0deg, transparent, rgba(255,209,102,.08), transparent 30%);
-    animation:rotateGlow 8s linear infinite;
-    pointer-events:none;
-  }
-  @keyframes rotateGlow{ to{ transform:rotate(360deg) } }
-
-  .wish-card h2{
-    font-size:clamp(1.05rem,3.6vw,1.35rem);
-    margin-bottom:12px;
-    background:linear-gradient(90deg,#ffd166,#ff6b9d,#c77dff);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    position:relative;
+    padding:30px 34px 28px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
   }
   .wish-card p{
-    font-size:.9rem;
-    line-height:1.75;
-    color:rgba(255,255,255,.85);
+    font-size:.92rem;
+    line-height:1.85;
+    color:rgba(255,255,255,.88);
     margin-bottom:20px;
-    position:relative;
+    text-align:left;
   }
-  .wish-card p .highlight{
-    color:#ffd166;
-    font-weight:600;
+  .wish-card p:last-of-type{
+    margin-bottom:24px;
   }
 
   /* ====== CANVAS CONFETTI ====== */
@@ -414,7 +366,9 @@
   /* ====== RESPONSIF ====== */
   @media (max-width:520px){
     .scene{ transform:scale(.74); }
-    .bottom-area{ margin-top:10px; min-height:170px; }
+    .bottom-area{ margin-top:10px; min-height:200px; }
+    .wish-card{ padding:24px 22px 22px; }
+    .wish-card p{ font-size:.86rem; line-height:1.75; }
   }
   @media (max-width:360px){
     .scene{ transform:scale(.62); }
@@ -424,9 +378,9 @@
 <body>
 
   <div class="scene">
-    <h1 class="title">🎉 Selamat Ulang Tahun 🎉</h1>
+    <h1 class="title">Selamat Ulang Tahun</h1>
     <div class="name">Salwina Sakina Fatria</div>
-    <p class="subtitle">— semoga hari ini jadi hari terindahmu —</p>
+    <p class="subtitle">— semoga hari ini seindah kamu —</p>
 
     <div class="cake">
       <div class="candles" id="candles"></div>
@@ -445,14 +399,24 @@
 
       <div class="wish" id="wish">
         <div class="wish-card">
-          <h2>🎂 Yeay! Lilinnya Berhasil Ditiup!</h2>
           <p>
-            Selamat ulang tahun, <span class="highlight">Salwina Sakina Fatria</span>! 🌷<br><br>
-            Semoga di usia yang baru ini, setiap langkahmu dipenuhi kebahagiaan,
-            kesehatan selalu menyertai, dan semua impian yang kamu simpan
-            satu per satu menemukan jalannya untuk jadi nyata. ✨<br><br>
-            Terima kasih sudah menjadi pribadi yang hangat dan menginspirasi.
-            Tetap bersinar, tetap jadi <span class="highlight">Salwina</span> yang luar biasa. 💖
+            Selamat ulang tahun, sayang ❤️<br>
+            Semoga di umur yang baru ini kamu selalu sehat, bahagia,
+            dan dimudahkan dalam mengejar semua yang kamu inginkan.
+          </p>
+          <p>
+            Terima kasih sudah hadir dan menjadi bagian penting dalam hidup aku.
+            Aku senang bisa mengenal kamu, menemani kamu, dan melihat kamu
+            berkembang sampai sejauh ini.
+          </p>
+          <p>
+            Semoga ke depannya ada banyak hal baik yang datang ke kamu,
+            dan semoga aku masih bisa jadi salah satu orang yang menemani
+            kamu melewati semuanya.
+          </p>
+          <p>
+            Happy birthday, Salwina. ❤️<br>
+            Semoga hari ini seindah kamu.
           </p>
           <button class="btn" id="resetBtn">🕯️ Nyalakan Lilin Lagi</button>
         </div>
@@ -490,7 +454,7 @@
 })();
 
 /* =========================================================
-   2. BUAT LILIN (6 buah, simbol usia baru)
+   2. BUAT LILIN
    ========================================================= */
 const CANDLE_COUNT = 6;
 const candlesEl = document.getElementById('candles');
@@ -628,7 +592,7 @@ async function startMic(){
 
     micBtn.textContent = '🎤 Mendengarkan… tiup sekarang!';
     micBtn.classList.add('listening');
-    hint.innerHTML = 'Tiup sekuat mungkin ke arah mikrofon, Salwina 💨✨';
+    hint.innerHTML = 'Tiup sekuat mungkin ke arah mikrofon, Salwina 💨';
     meter.classList.add('show');
 
     detectBlow();
