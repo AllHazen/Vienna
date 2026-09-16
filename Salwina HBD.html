@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy Birthday Salwina Sakina Fatria</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  body{
+    min-height:100vh;
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:radial-gradient(ellipse at 50% -10%, #4a1d6e 0%, #24093f 45%, #0b0418 100%);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow-x:hidden;
+    position:relative;
+    padding:24px 16px 40px;
+  }
+
+  /* Bintang berkelip di latar */
+  body::before{
+    content:'';
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(1.6px 1.6px at 30px 40px, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 140px 110px, #ffe9b0, transparent),
+      radial-gradient(1.8px 1.8px at 230px 60px, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 80px 200px, #cfe9ff, transparent),
+      radial-gradient(1.4px 1.4px at 190px 240px, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 300px 150px, #ffd9f0, transparent);
+    background-size:340px 340px;
+    opacity:.55;
+    animation:twinkle 4s ease-in-out infinite alternate;
+    pointer-events:none;
+  }
+  @keyframes twinkle{ from{opacity:.25} to{opacity:.75} }
+
+  /* Hati & balon melayang di latar */
+  .bg-float{
+    position:fixed;
+    font-size:1.8rem;
+    opacity:.13;
+    pointer-events:none;
+    animation:floatUp linear infinite;
+    z-index:1;
+  }
+  @keyframes floatUp{
+    0%  { transform:translateY(105vh) rotate(0deg); opacity:0 }
+    10% { opacity:.18 }
+    90% { opacity:.18 }
+    100%{ transform:translateY(-15vh) rotate(360deg); opacity:0 }
+  }
+
+  .scene{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  /* ====== JUDUL ====== */
+  .title{
+    font-size:clamp(1.4rem,5vw,2.5rem);
+    font-weight:800;
+    line-height:1.25;
+    letter-spacing:-.5px;
+    background:linear-gradient(90deg,#ffd166,#ff6b9d,#c77dff,#4cc9f0,#ffd166);
+    background-size:300% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:shimmer 7s linear infinite;
+    margin-bottom:10px;
+  }
+  @keyframes shimmer{ to{ background-position:300% 0 } }
+
+  /* Nama Salwina — jadi bintang utama */
+  .name{
+    font-size:clamp(1.9rem,7.5vw,3.6rem);
+    font-weight:900;
+    line-height:1.15;
+    letter-spacing:-1px;
+    background:linear-gradient(120deg,#fff 0%,#ffd166 25%,#ff6b9d 50%,#c77dff 75%,#fff 100%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:shimmer 5s linear infinite;
+    filter:drop-shadow(0 0 24px rgba(255,107,157,.55));
+    margin-bottom:6px;
+    position:relative;
+  }
+  .name::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    transform:translateX(-50%);
+    width:60%;
+    height:3px;
+    border-radius:99px;
+    background:linear-gradient(90deg,transparent,#ffd166,#ff6b9d,#c77dff,transparent);
+    opacity:.85;
+    filter:blur(1px);
+  }
+
+  .subtitle{
+    font-size:clamp(.82rem,2.7vw,1.02rem);
+    color:rgba(255,255,255,.72);
+    margin-top:16px;
+    margin-bottom:4px;
+    letter-spacing:.4px;
+    font-style:italic;
+  }
+
+  /* ====== KUE ====== */
+  .cake{
+    position:relative;
+    width:340px;
+    height:245px;
+    margin-top:118px;
+    filter:drop-shadow(0 24px 36px rgba(0,0,0,.55));
+  }
+
+  .tier{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:10px;
+  }
+  .tier.bottom{ width:340px; height:95px; bottom:0;      background:linear-gradient(180deg,#ffdbe9,#f7a8c8); z-index:1 }
+  .tier.mid   { width:258px; height:80px; bottom:95px;  background:linear-gradient(180deg,#ffd0e2,#f39ec3); z-index:2 }
+  .tier.top   { width:178px; height:70px; bottom:175px; background:linear-gradient(180deg,#ffc2d9,#ef8fb8); z-index:3 }
+
+  .frosting{
+    position:absolute;
+    top:-8px; left:-5px; right:-5px;
+    height:26px;
+    background-color:#fff6fb;
+    background-image:
+      radial-gradient(circle at 18% 45%, #ff6b9d 1.5px, transparent 2px),
+      radial-gradient(circle at 44% 70%, #4cc9f0 1.5px, transparent 2px),
+      radial-gradient(circle at 68% 35%, #ffd166 1.5px, transparent 2px),
+      radial-gradient(circle at 88% 65%, #c77dff 1.5px, transparent 2px);
+    background-size:64px 26px;
+    border-radius:14px 14px 8px 8px;
+    box-shadow:0 3px 0 rgba(0,0,0,.06);
+  }
+  .frosting::after{
+    content:'';
+    position:absolute;
+    top:100%; left:0; right:0;
+    height:16px;
+    background:radial-gradient(circle at 11px 0, #fff6fb 11px, transparent 11.5px) repeat-x;
+    background-size:22px 16px;
+  }
+
+  .plate{
+    position:absolute;
+    bottom:-16px; left:50%;
+    transform:translateX(-50%);
+    width:410px; height:22px;
+    border-radius:50%;
+    background:linear-gradient(180deg,#e7edf7,#8f9cb4);
+    box-shadow:0 14px 34px rgba(0,0,0,.55), inset 0 -4px 8px rgba(0,0,0,.15);
+    z-index:0;
+  }
+
+  /* ====== LILIN ====== */
+  .candles{
+    position:absolute;
+    bottom:248px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:flex-end;
+    gap:18px;
+    z-index:5;
+  }
+
+  .candle{
+    position:relative;
+    width:13px;
+    height:56px;
+  }
+
+  .wax{
+    position:absolute;
+    inset:0;
+    border-radius:4px 4px 3px 3px;
+    background:repeating-linear-gradient(45deg,#ffffff 0 7px, var(--stripe,#ff6b9d) 7px 14px);
+    box-shadow:inset -3px 0 6px rgba(0,0,0,.14);
+  }
+  .candle:nth-child(1) .wax{ --stripe:#ff6b9d }
+  .candle:nth-child(2) .wax{ --stripe:#4cc9f0 }
+  .candle:nth-child(3) .wax{ --stripe:#ffd166 }
+  .candle:nth-child(4) .wax{ --stripe:#c77dff }
+  .candle:nth-child(5) .wax{ --stripe:#06d6a0 }
+  .candle:nth-child(6) .wax{ --stripe:#ff9e00 }
+
+  .wick{
+    position:absolute;
+    top:-7px; left:50%;
+    width:2px; height:9px;
+    margin-left:-1px;
+    background:#4a3728;
+    border-radius:1px;
+  }
+
+  .flame-wrap{
+    position:absolute;
+    left:50%;
+    bottom:calc(100% - 3px);
+    transform:translateX(-50%);
+    width:0; height:0;
+  }
+
+  .flame{
+    position:absolute;
+    left:-8px;
+    bottom:0;
+    width:16px;
+    height:27px;
+    border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;
+    background:radial-gradient(ellipse at 50% 72%,
+      #fffbe0 0%, #ffe066 26%, #ffa41b 56%, #ff5c00 84%, rgba(255,60,0,0) 100%);
+    box-shadow:
+      0 0 16px 4px rgba(255,170,0,.7),
+      0 0 42px 12px rgba(255,90,0,.35);
+    transform-origin:50% 100%;
+    animation:flicker .16s ease-in-out infinite alternate;
+    transition:opacity .3s ease, transform .3s ease;
+  }
+  @keyframes flicker{
+    0%  { transform:scale(1) rotate(-3deg);      opacity:.92 }
+    100%{ transform:scale(1.12,.9) rotate(3deg); opacity:1 }
+  }
+  .flame.out{
+    animation:none;
+    opacity:0;
+    transform:scale(.15) translateY(8px);
+  }
+
+  .smoke{
+    position:absolute;
+    left:-5px; bottom:0;
+    width:10px; height:10px;
+    border-radius:50%;
+    background:rgba(210,210,225,.55);
+    filter:blur(3px);
+    animation:smokeUp 2.1s ease-out forwards;
+  }
+  @keyframes smokeUp{
+    0%  { opacity:.75; transform:translate(0,0) scale(.5) }
+    100%{ opacity:0;   transform:translate(14px,-80px) scale(2.6) }
+  }
+
+  /* ====== KONTROL ====== */
+  .bottom-area{
+    margin-top:34px;
+    min-height:140px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+  }
+
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    transition:opacity .4s ease, transform .4s ease;
+  }
+  .controls.hidden{
+    opacity:0;
+    transform:translateY(10px);
+    pointer-events:none;
+    position:absolute;
+  }
+
+  .btn{
+    font:inherit;
+    font-weight:600;
+    font-size:.92rem;
+    padding:12px 24px;
+    border-radius:99px;
+    border:none;
+    cursor:pointer;
+    color:#fff;
+    background:linear-gradient(135deg,#ff6b9d,#c44dff);
+    box-shadow:0 8px 24px rgba(196,77,255,.35);
+    transition:transform .15s, box-shadow .15s, background .2s;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(196,77,255,.5) }
+  .btn:active{ transform:translateY(0) scale(.97) }
+  .btn.ghost{
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.22);
+    box-shadow:none;
+  }
+  .btn.ghost:hover{ background:rgba(255,255,255,.16) }
+  .btn.listening{
+    background:linear-gradient(135deg,#06d6a0,#4cc9f0);
+    box-shadow:0 0 0 0 rgba(6,214,160,.6);
+    animation:pulse 1.4s infinite;
+  }
+  @keyframes pulse{
+    0%  { box-shadow:0 0 0 0 rgba(6,214,160,.55) }
+    70% { box-shadow:0 0 0 16px rgba(6,214,160,0) }
+    100%{ box-shadow:0 0 0 0 rgba(6,214,160,0) }
+  }
+
+  .hint{
+    margin-top:16px;
+    font-size:.82rem;
+    color:rgba(255,255,255,.5);
+    max-width:340px;
+    line-height:1.5;
+    transition:opacity .3s;
+  }
+
+  .meter{
+    width:230px;
+    height:8px;
+    margin-top:14px;
+    border-radius:99px;
+    background:rgba(255,255,255,.12);
+    overflow:hidden;
+    opacity:0;
+    transition:opacity .3s;
+  }
+  .meter.show{ opacity:1 }
+  .meter-fill{
+    height:100%;
+    width:0%;
+    border-radius:99px;
+    background:linear-gradient(90deg,#4cc9f0,#ffd166,#ff4d6d);
+    transition:width .08s linear;
+  }
+
+  /* ====== PESAN UCAPAN ====== */
+  .wish{
+    position:absolute;
+    top:0;
+    opacity:0;
+    transform:translateY(14px) scale(.96);
+    transition:opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1.4);
+    pointer-events:none;
+    max-width:480px;
+  }
+  .wish.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .wish-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-radius:22px;
+    padding:28px 32px 26px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5), 0 0 80px rgba(196,77,255,.18);
+    position:relative;
+    overflow:hidden;
+  }
+  .wish-card::before{
+    content:'';
+    position:absolute;
+    top:-50%; left:-50%;
+    width:200%; height:200%;
+    background:conic-gradient(from 0deg, transparent, rgba(255,209,102,.08), transparent 30%);
+    animation:rotateGlow 8s linear infinite;
+    pointer-events:none;
+  }
+  @keyframes rotateGlow{ to{ transform:rotate(360deg) } }
+
+  .wish-card h2{
+    font-size:clamp(1.05rem,3.6vw,1.35rem);
+    margin-bottom:12px;
+    background:linear-gradient(90deg,#ffd166,#ff6b9d,#c77dff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    position:relative;
+  }
+  .wish-card p{
+    font-size:.9rem;
+    line-height:1.75;
+    color:rgba(255,255,255,.85);
+    margin-bottom:20px;
+    position:relative;
+  }
+  .wish-card p .highlight{
+    color:#ffd166;
+    font-weight:600;
+  }
+
+  /* ====== CANVAS CONFETTI ====== */
+  #confetti{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:99;
+  }
+
+  /* ====== RESPONSIF ====== */
+  @media (max-width:520px){
+    .scene{ transform:scale(.74); }
+    .bottom-area{ margin-top:10px; min-height:170px; }
+  }
+  @media (max-width:360px){
+    .scene{ transform:scale(.62); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="scene">
+    <h1 class="title">🎉 Selamat Ulang Tahun 🎉</h1>
+    <div class="name">Salwina Sakina Fatria</div>
+    <p class="subtitle">— semoga hari ini jadi hari terindahmu —</p>
+
+    <div class="cake">
+      <div class="candles" id="candles"></div>
+
+      <div class="tier top"><span class="frosting"></span></div>
+      <div class="tier mid"><span class="frosting"></span></div>
+      <div class="tier bottom"><span class="frosting"></span></div>
+      <div class="plate"></div>
+    </div>
+
+    <div class="bottom-area">
+      <div class="controls" id="controls">
+        <button class="btn" id="micBtn">🎤 Tiup Pakai Mikrofon</button>
+        <button class="btn ghost" id="blowBtn">💨 Tiup Lilin</button>
+      </div>
+
+      <div class="wish" id="wish">
+        <div class="wish-card">
+          <h2>🎂 Yeay! Lilinnya Berhasil Ditiup!</h2>
+          <p>
+            Selamat ulang tahun, <span class="highlight">Salwina Sakina Fatria</span>! 🌷<br><br>
+            Semoga di usia yang baru ini, setiap langkahmu dipenuhi kebahagiaan,
+            kesehatan selalu menyertai, dan semua impian yang kamu simpan
+            satu per satu menemukan jalannya untuk jadi nyata. ✨<br><br>
+            Terima kasih sudah menjadi pribadi yang hangat dan menginspirasi.
+            Tetap bersinar, tetap jadi <span class="highlight">Salwina</span> yang luar biasa. 💖
+          </p>
+          <button class="btn" id="resetBtn">🕯️ Nyalakan Lilin Lagi</button>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">
+        Klik <b>“Tiup Pakai Mikrofon”</b> lalu tiup ke arah mikrofon,
+        atau langsung klik <b>“Tiup Lilin”</b>. Bisa juga tekan <b>Spasi</b> 💨
+      </p>
+
+      <div class="meter" id="meter">
+        <div class="meter-fill" id="meterFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+<script>
+/* =========================================================
+   1. DEKORASI LATAR — HATI & BALON MELAYANG
+   ========================================================= */
+(function(){
+  const emojis = ['💖','🎈','✨','🌸','🎀','💫','🌷','⭐'];
+  for (let i = 0; i < 14; i++){
+    const el = document.createElement('div');
+    el.className = 'bg-float';
+    el.textContent = emojis[(Math.random() * emojis.length) | 0];
+    el.style.left = (Math.random() * 100) + 'vw';
+    el.style.fontSize = (1.2 + Math.random() * 1.8) + 'rem';
+    el.style.animationDuration = (12 + Math.random() * 14) + 's';
+    el.style.animationDelay = (-Math.random() * 20) + 's';
+    document.body.appendChild(el);
+  }
+})();
+
+/* =========================================================
+   2. BUAT LILIN (6 buah, simbol usia baru)
+   ========================================================= */
+const CANDLE_COUNT = 6;
+const candlesEl = document.getElementById('candles');
+
+for (let i = 0; i < CANDLE_COUNT; i++) {
+  const c = document.createElement('div');
+  c.className = 'candle';
+  c.innerHTML = `
+    <div class="wax"></div>
+    <div class="wick"></div>
+    <div class="flame-wrap"><div class="flame"></div></div>
+  `;
+  candlesEl.appendChild(c);
+}
+
+/* =========================================================
+   3. ELEMEN
+   ========================================================= */
+const micBtn    = document.getElementById('micBtn');
+const blowBtn   = document.getElementById('blowBtn');
+const resetBtn  = document.getElementById('resetBtn');
+const controls  = document.getElementById('controls');
+const wish      = document.getElementById('wish');
+const hint      = document.getElementById('hint');
+const meter     = document.getElementById('meter');
+const meterFill = document.getElementById('meterFill');
+
+let blownOut = false;
+
+/* =========================================================
+   4. TIUP LILIN
+   ========================================================= */
+function blowOut(){
+  if (blownOut) return;
+  blownOut = true;
+  stopMic();
+
+  const flames = document.querySelectorAll('.flame');
+
+  flames.forEach((flame, i) => {
+    setTimeout(() => {
+      flame.classList.add('out');
+      createSmoke(flame);
+    }, i * 160);
+  });
+
+  const total = flames.length * 160 + 420;
+  setTimeout(celebrate, total);
+}
+
+function createSmoke(flame){
+  const wrap = flame.parentElement;
+  for (let i = 0; i < 3; i++){
+    const s = document.createElement('div');
+    s.className = 'smoke';
+    s.style.animationDelay = (i * 0.22) + 's';
+    wrap.appendChild(s);
+    setTimeout(() => s.remove(), 2800 + i * 220);
+  }
+}
+
+function celebrate(){
+  launchConfetti(180);
+  setTimeout(() => launchConfetti(130), 700);
+  setTimeout(() => launchConfetti(130), 1500);
+  setTimeout(() => launchConfetti(90), 2400);
+
+  controls.classList.add('hidden');
+  wish.classList.add('show');
+  hint.style.opacity = '0';
+  meter.classList.remove('show');
+}
+
+/* =========================================================
+   5. RESET
+   ========================================================= */
+function reset(){
+  blownOut = false;
+  particles.length = 0;
+
+  document.querySelectorAll('.flame').forEach(f => f.classList.remove('out'));
+  document.querySelectorAll('.smoke').forEach(s => s.remove());
+
+  wish.classList.remove('show');
+  controls.classList.remove('hidden');
+  hint.style.opacity = '1';
+  hint.innerHTML = 'Klik <b>“Tiup Pakai Mikrofon”</b> lalu tiup ke arah mikrofon, atau langsung klik <b>“Tiup Lilin”</b>. Bisa juga tekan <b>Spasi</b> 💨';
+
+  micBtn.textContent = '🎤 Tiup Pakai Mikrofon';
+  micBtn.classList.remove('listening');
+
+  meter.classList.remove('show');
+  meterFill.style.width = '0%';
+}
+
+/* =========================================================
+   6. DETEKSI MIKROFON
+   ========================================================= */
+let audioCtx = null;
+let analyser = null;
+let micStream = null;
+let micActive = false;
+let loudFrames = 0;
+let freqData = null;
+
+async function startMic(){
+  if (micActive || blownOut) return;
+
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+    hint.textContent = 'Browser ini tidak mendukung mikrofon. Pakai tombol "Tiup Lilin" ya. 🙏';
+    return;
+  }
+
+  try {
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: false,
+        autoGainControl: false
+      }
+    });
+
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
+
+    const source = audioCtx.createMediaStreamSource(micStream);
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 1024;
+    analyser.smoothingTimeConstant = 0.55;
+    source.connect(analyser);
+
+    freqData = new Uint8Array(analyser.frequencyBinCount);
+    micActive = true;
+    loudFrames = 0;
+
+    micBtn.textContent = '🎤 Mendengarkan… tiup sekarang!';
+    micBtn.classList.add('listening');
+    hint.innerHTML = 'Tiup sekuat mungkin ke arah mikrofon, Salwina 💨✨';
+    meter.classList.add('show');
+
+    detectBlow();
+
+  } catch (err) {
+    console.warn(err);
+    hint.innerHTML = 'Mikrofon tidak bisa diakses 😕 Gunakan tombol <b>“Tiup Lilin”</b> saja.';
+    micBtn.classList.remove('listening');
+  }
+}
+
+function detectBlow(){
+  if (!micActive || !analyser) return;
+
+  analyser.getByteFrequencyData(freqData);
+
+  let sum = 0;
+  for (let i = 0; i < freqData.length; i++) sum += freqData[i];
+  const avg = sum / freqData.length;
+
+  const level = Math.min(100, avg * 2.2);
+  meterFill.style.width = level + '%';
+
+  if (avg > 38){
+    loudFrames++;
+  } else {
+    loudFrames = Math.max(0, loudFrames - 1);
+  }
+
+  if (loudFrames >= 5){
+    blowOut();
+    return;
+  }
+
+  requestAnimationFrame(detectBlow);
+}
+
+function stopMic(){
+  micActive = false;
+  if (micStream){
+    micStream.getTracks().forEach(t => t.stop());
+    micStream = null;
+  }
+  if (audioCtx){
+    audioCtx.close().catch(() => {});
+    audioCtx = null;
+  }
+  analyser = null;
+  micBtn.classList.remove('listening');
+  if (!blownOut) micBtn.textContent = '🎤 Tiup Pakai Mikrofon';
+}
+
+/* =========================================================
+   7. CONFETTI
+   ========================================================= */
+const canvas = document.getElementById('confetti');
+const ctx = canvas.getContext('2d');
+let W = 0, H = 0;
+let particles = [];
+let animId = null;
+
+function resizeCanvas(){
+  const dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const COLORS = ['#ff4d6d','#ffd166','#06d6a0','#4cc9f0','#c77dff','#ff9e00','#ff70a6','#ffffff','#ffb3d9'];
+
+function launchConfetti(count){
+  for (let i = 0; i < count; i++){
+    particles.push({
+      x: Math.random() * W,
+      y: -20 - Math.random() * H * 0.6,
+      w: 6 + Math.random() * 8,
+      h: 8 + Math.random() * 12,
+      color: COLORS[(Math.random() * COLORS.length) | 0],
+      vx: -1.4 + Math.random() * 2.8,
+      vy: 1.6 + Math.random() * 3.4,
+      rot: Math.random() * Math.PI * 2,
+      vr: -0.16 + Math.random() * 0.32,
+      sway: Math.random() * Math.PI * 2,
+      swaySpeed: 0.02 + Math.random() * 0.04,
+      flip: Math.random() * Math.PI * 2,
+      flipSpeed: 0.05 + Math.random() * 0.1
+    });
+  }
+  if (!animId) animId = requestAnimationFrame(loopConfetti);
+}
+
+function loopConfetti(){
+  ctx.clearRect(0, 0, W, H);
+
+  for (let i = particles.length - 1; i >= 0; i--){
+    const p = particles[i];
+
+    p.sway += p.swaySpeed;
+    p.flip += p.flipSpeed;
+    p.x += p.vx + Math.sin(p.sway) * 0.9;
+    p.y += p.vy;
+    p.rot += p.vr;
+
+    if (p.y > H + 60 || p.x < -80 || p.x > W + 80){
+      particles.splice(i, 1);
+      continue;
+    }
+
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot);
+    ctx.scale(1, Math.cos(p.flip));
+    ctx.fillStyle = p.color;
+    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+    ctx.restore();
+  }
+
+  if (particles.length){
+    animId = requestAnimationFrame(loopConfetti);
+  } else {
+    ctx.clearRect(0, 0, W, H);
+    animId = null;
+  }
+}
+
+/* =========================================================
+   8. EVENT LISTENER
+   ========================================================= */
+micBtn.addEventListener('click', () => {
+  if (micActive) { stopMic(); return; }
+  startMic();
+});
+
+blowBtn.addEventListener('click', blowOut);
+resetBtn.addEventListener('click', reset);
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space' && !blownOut){
+    e.preventDefault();
+    blowOut();
+  }
+});
+</script>
+</body>
+</html>
